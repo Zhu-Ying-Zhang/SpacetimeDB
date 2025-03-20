@@ -9,10 +9,6 @@ RUN apt-get update && apt-get install -y \
       build-essential \
       && rm -rf /var/lib/apt/lists/*
 
-# Create and switch to a non-root user
-RUN useradd -m spacetime
-USER spacetime
-
 # Install SpacetimeDB
 RUN curl -sSfL https://install.spacetimedb.com | bash -s -- --yes
 ENV PATH="/home/spacetime/.local/bin:${PATH}"
