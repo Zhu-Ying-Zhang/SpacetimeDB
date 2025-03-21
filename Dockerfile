@@ -1,5 +1,5 @@
 # Use a base image that supports multi-arch
-FROM rust:bookworm
+# FROM rust:bookworm
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
